@@ -1,22 +1,20 @@
 const { Gallery } = require("../models");
 
-const getGallery = async (req, res) => {
+exports.getGallery = async (req, res) => {
   try {
-    const images = await Gallery.findAll();
-    res.json(images);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to fetch gallery images" });
+    const gallery = await Gallery.findAll();
+    res.json(gallery);
+  } catch (err) {
+    res.status(500).send(err.message);
   }
 };
 
-const addImage = async (req, res) => {
+exports.addImage = async (req, res) => {
   try {
-    const { imageUrl } = req.body;
-    const image = await Gallery.create({ imageUrl });
-    res.json(image);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to add image" });
+    const { image } = req.body;
+    const newImage = await Gallery.create({ image });
+    res.json(newImage);
+  } catch (err) {
+    res.status(500).send(err.message);
   }
 };
-
-module.exports = { getGallery, addImage };

@@ -2,7 +2,15 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
 const Gallery = sequelize.define("Gallery", {
-  imageUrl: { type: DataTypes.STRING, allowNull: false },
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  image: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
 });
 
 module.exports = Gallery;
