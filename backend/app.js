@@ -1,37 +1,26 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-require("dotenv").config();
+const express = require('express');
+const path = require('path');
+const dotenv = require('dotenv');
 
-// Import route files for products, gallery, and inquiries
-const productRoutes = require("./routes/productRoutes");
-const galleryRoutes = require("./routes/galleryRoutes");
-const inquiryRoutes = require("./routes/inquiryRoutes");
+// Load environment variables
+dotenv.config();
 
+// Initialize Express
 const app = express();
 
-// Middleware setup
-app.use(cors()); // Enable CORS for cross-origin requests
-app.use(bodyParser.json()); // Parse incoming JSON requests
+// Middleware
+app.use(express.json());
 
-// Routes
-app.use("/api/products", productRoutes);  // Product-related endpoints
-app.use("/api/gallery", galleryRoutes);   // Gallery-related endpoints
-app.use("/api/inquiries", inquiryRoutes); // Inquiries-related endpoints
+// Serve static files from the frontend folder
+app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Basic root endpoint for testing
-app.get("/", (req, res) => {
-  res.send("Hello, World! Server is running.");
+// Handle all other routes to serve `index.html`
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
 });
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);  // Log the error stack for debugging
-  res.status(500).send("Something went wrong! Please try again later.");
-});
-
-// Server setup
-const PORT = process.env.PORT || 5000;
+// Start the server
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });

@@ -1,22 +1,29 @@
-const { Product } = require("../models");
+const db = require('../config/db');
 
-const getAllProducts = async (req, res) => {
-  try {
-    const products = await Product.findAll();
-    res.json(products);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to fetch products" });
-  }
+// Get all products
+exports.getProducts = async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM products');
+        res.json(rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
 };
 
-const addProduct = async (req, res) => {
-  try {
+// Add a new product
+exports.addProduct = async (req, res) => {
     const { name, description, price } = req.body;
-    const product = await Product.create({ name, description, price });
-    res.json(product);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to add product" });
-  }
-};
 
-module.exports = { getAllProducts, addProduct };
+    try {
+        await db.query('INSERT INTO products (name, description, price) VALUES (?, ?, ?)', [
+            name,
+            description,
+            price,
+        ]);
+        res.status(201).json({ message: 'Product added successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
