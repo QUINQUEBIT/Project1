@@ -1,10 +1,18 @@
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
+// Debugging: Check if the environment variables are being loaded correctly
+console.log("DB_NAME:", process.env.DB_NAME);
+console.log("DB_USER:", process.env.DB_USER);
+console.log("DB_PASSWORD:", process.env.DB_PASSWORD);
+console.log("DB_HOST:", process.env.DB_HOST);
+
+// Throw error if any required environment variable is missing
 if (!process.env.DB_NAME || !process.env.DB_USER || !process.env.DB_PASSWORD || !process.env.DB_HOST) {
   throw new Error("Missing required database environment variables");
 }
 
+// Setup Sequelize instance using environment variables
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
   host: process.env.DB_HOST,
   dialect: "mysql",
@@ -16,6 +24,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   },
 });
 
+// Test the database connection
 (async () => {
   try {
     await sequelize.authenticate();
@@ -26,4 +35,5 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   }
 })();
 
+// Export the sequelize instance to be used in models
 module.exports = sequelize;
