@@ -1,0 +1,17 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Precast Wall Type A",
+        "image": "assets/gallery/wall_type_a.jpg",
+        "description": "Durable and cost-effective."
+      },
+      {
+        "id": 2,
+        "name": "Precast Wall Type B",
+        "image": "assets/gallery/wall_type_b.jpg",
+        "description": "Modern and elegant."
+      }
+    ]
+  }
+  

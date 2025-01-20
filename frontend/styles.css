@@ -1,81 +1,81 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Header Navigation */
-  header {
-    background-color: #444;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  header ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  header ul li {
-    margin: 0 10px;
-  }
-  
-  header ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  header ul li a:hover {
-    color: #ffd700;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    text-align: center;
-    color: #fff;
-    padding: 100px 20px;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin: 20px 0;
-  }
-  
-  .hero .cta-button {
-    background-color: #ffd700;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-  
-  .hero .cta-button:hover {
-    background-color: #444;
-    color: #ffd700;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-  }
-  
+/* General Reset and Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('assets/images/hero.jpg');
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Services Section */
+.services .card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header-right a {
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Matches header height */
+  right: 0;
+  width: 200px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ccc;
+  height: 100%;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  font-size: 16px;
+}

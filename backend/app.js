@@ -1,32 +1,24 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const { sequelize } = require("./models");
-
-require("dotenv").config();
-
-const galleryRoutes = require("./routes/galleryRoutes");
-const productRoutes = require("./routes/productRoutes");
-const inquiryRoutes = require("./routes/inquiryRoutes");
+// app.js
+const express = require('express');
+const path = require('path');
+const galleryRoutes = require('./routes/galleryRoutes');
+const productRoutes = require('./routes/productRoutes');
+require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
+// Middleware
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Routes
-app.use("/api/gallery", galleryRoutes);
-app.use("/api/products", productRoutes);
-app.use("/api/inquiry", inquiryRoutes);
+app.use('/api/gallery', galleryRoutes);
+app.use('/api/products', productRoutes);
 
-// Test Route
-app.get("/", (req, res) => {
-  res.send("API is running...");
+// Default Route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
-// Sync database and start server
-sequelize.sync({ alter: true }).then(() => {
-  app.listen(process.env.PORT, () =>
-    console.log(`Server running on port ${process.env.PORT}`)
-  );
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
