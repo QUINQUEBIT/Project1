@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Suraksha Precast</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Our Products</h1>
+  </header>
+  <section id="products">
+    <!-- Products will be dynamically loaded using JS -->
+  </section>
+  <footer>
+    <p>© 2025 Suraksha Precast. All Rights Reserved.</p>
+  </footer>
+  <script src="public/js/scripts.js"></script>
+  <script>
+    fetch("http://localhost:5000/api/products")
+      .then((res) => res.json())
+      .then((data) => {
+        const productsContainer = document.getElementById("products");
+        data.forEach((product) => {
+          const productCard = document.createElement("div");
+          productCard.classList.add("product-card");
+          productCard.innerHTML = `
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <p>Price: ₹${product.price}</p>
+          `;
+          productsContainer.appendChild(productCard);
+        });
+      });
+  </script>
+</body>
+</html>
