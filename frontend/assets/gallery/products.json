@@ -1,17 +1,8 @@
-{
-    "products": [
-      {
-        "id": 1,
-        "name": "Precast Wall Type A",
-        "image": "assets/gallery/wall_type_a.jpg",
-        "description": "Durable and cost-effective."
-      },
-      {
-        "id": 2,
-        "name": "Precast Wall Type B",
-        "image": "assets/gallery/wall_type_b.jpg",
-        "description": "Modern and elegant."
-      }
-    ]
-  }
-  
+[
+  { "name": "Compound Wall", "image": "compound.jpeg" },
+  { "name": "Precast Room", "image": "precast room.jpeg" },
+  { "name": "Room", "image": "room.jpeg" },
+  { "name": "Slabs", "image": "slabs.jpeg" },
+  { "name": "Wall", "image": "wall.jpeg" },
+  { "name": "Wall2", "image": "wall2.jpeg" }
+]
