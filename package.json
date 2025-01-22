@@ -4,7 +4,7 @@
   "description": "Website for Suraksha Precast company.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node backend/app.js"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
