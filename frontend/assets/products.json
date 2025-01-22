@@ -1,22 +1,14 @@
 [
   {
-    "name": "Compound Wall Type A",
-    "image": "assets/images/compound-wall-type-a.jpg",
-    "description": "Durable and affordable compound wall solution for residential properties."
+    "id": 1,
+    "name": "Compound Wall",
+    "image": "compound.jpeg",
+    "description": "Durable and reliable compound walls."
   },
   {
-    "name": "Compound Wall Type B",
-    "image": "assets/images/compound-wall-type-b.jpg",
-    "description": "High-quality compound wall designed for commercial spaces."
-  },
-  {
-    "name": "Precast Slabs",
-    "image": "assets/images/precast-slabs.jpg",
-    "description": "Versatile precast slabs for various construction needs."
-  },
-  {
-    "name": "Boundary Wall",
-    "image": "assets/images/boundary-wall.jpg",
-    "description": "Elegant and robust boundary wall for enhanced security."
+    "id": 2,
+    "name": "Precast Room",
+    "image": "precast room.jpeg",
+    "description": "High-quality precast rooms for various uses."
   }
 ]

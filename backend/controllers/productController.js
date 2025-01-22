@@ -1,6 +1,7 @@
-const path = require('path');
+const products = require('../../frontend/assets/gallery/products.json');
 
-// Controller to serve product images and details
-exports.getProducts = (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/assets/gallery/photos'));
+const getProducts = (req, res) => {
+  res.json(products);
 };
+
+module.exports = { getProducts };

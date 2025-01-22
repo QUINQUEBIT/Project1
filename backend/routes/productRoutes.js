@@ -1,8 +1,8 @@
 const express = require('express');
-const router = express.Router();
-const productController = require('../controllers/productController');
+const { getProducts } = require('../controllers/productController');
 
-// Route for fetching product images
-router.get('/', productController.getProducts);
+const router = express.Router();
+
+router.get('/', getProducts);
 
 module.exports = router;
