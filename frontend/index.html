@@ -8,24 +8,48 @@
 </head>
 <body>
   <header>
-    <h1>Suraksha Precast</h1>
-    <nav>
+    <div class="logo">
+      <img src="assets/gallery/photos/logo.png" alt="Suraksha Precast Logo">
+    </div>
+    <div class="menu-toggle">☰</div>
+    <nav class="nav-menu">
       <ul>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="gst.html">GST</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-it-works">How it Works</a></li>
+        <li>
+          <a href="#products" class="dropdown">Products</a>
+          <ul class="submenu">
+            <li><a href="#">Compound Walls</a></li>
+            <li><a href="#">Precast Rooms</a></li>
+            <li><a href="#">Slabs</a></li>
+          </ul>
+        </li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="hero">
-      <h2>India's Leading Manufacturer of Precast Concrete Products</h2>
-      <button>View More</button>
-    </section>
-  </main>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>India's Leading Manufacturer of Precast Concrete Products</h1>
+      <button class="cta-btn">View More</button>
+    </div>
+    <div class="slider">
+      <img src="assets/gallery/photos/compound.jpeg" alt="Compound Wall">
+      <img src="assets/gallery/photos/room.jpeg" alt="Precast Room">
+      <img src="assets/gallery/photos/slabs.jpeg" alt="Slabs">
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-info">
+      <h3>Locate Us at</h3>
+      <p>1672A, 14th Main Rd,<br> Sector 7, HSR Layout, Bengaluru, Karnataka 560102</p>
+    </div>
+  </footer>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>
