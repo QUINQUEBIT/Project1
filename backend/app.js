@@ -8,21 +8,19 @@ const productRoutes = require('./routes/productRoutes.js');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Static files
 app.use('/assets', express.static(path.join(__dirname, '../frontend/assets')));
 
-
-// API routes
 app.use('/api/gallery', galleryRoutes);
 app.use('/api/products', productRoutes);
 
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+app.set('views', path.join(__dirname, '../frontend/views'));
 
-// Home Route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  res.render('index');
 });
 
-// Start server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
