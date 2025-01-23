@@ -4,29 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suraksha Precast</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/script.js"></script>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <h1>Suraksha Precast</h1>
-    <nav>
-      <a href="about-us.html">About Us</a>
-      <a href="projects.html">Projects</a>
-      <a href="products.html">Products</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="logo">
+      <img src="assets/gallery/photos/logo.jpg" alt="Suraksha Precast Logo">
+    </div>
+    <div class="header-info">
+      <h1>SURAKSHA PRECAST</h1>
+      <p>GST IN : XY325VDSUSBNTW</p>
+    </div>
+    <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
-  <section class="slider">
-    <img src="assets/gallery/photos/compound.jpg" alt="Compound Wall">
-    <img src="assets/gallery/photos/room.jpg" alt="Precast Room">
-    <img src="assets/gallery/photos/slabs.jpg" alt="Slabs">
-  </section>
+  <!-- Sidebar Menu -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="about-us.html">ABOUT US</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+    </ul>
+    <div class="contact-icons">
+      <a href="tel:+123456789"><img src="assets/gallery/photos/phone-icon.png" alt="Phone Icon"></a>
+      <a href="mailto:info@suraksha.com"><img src="assets/gallery/photos/mail-icon.png" alt="Mail Icon"></a>
+      <a href="https://wa.me/123456789" target="_blank"><img src="assets/gallery/photos/whatsapp-icon.png" alt="WhatsApp Icon"></a>
+    </div>
+  </nav>
 
-  <footer>
-    <p>&copy; 2025 Suraksha Precast</p>
-  </footer>
-  <script src="assets/js/scripts.js"></script>
+  <!-- Main Content -->
+  <main>
+    <div class="slider">
+      <img src="assets/gallery/photos/compound.jpeg" alt="Compound Wall">
+      <img src="assets/gallery/photos/room.jpeg" alt="Precast Room">
+      <img src="assets/gallery/photos/slabs.jpeg" alt="Slabs">
+    </div>
+    <section class="content">
+      <h2>About Us</h2>
+      <p>When started, how it's going, etc...</p>
+      <h2>Products</h2>
+      <p>Details about products.</p>
+      <h2>Services</h2>
+      <p>Details about services.</p>
+      <h2>Projects</h2>
+      <p>Happy customers, addresses, etc.</p>
+    </section>
+  </main>
 </body>
 </html>
