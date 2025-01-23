@@ -99,6 +99,7 @@ header {
   height: 600px;
   animation: slide 12s infinite;
   padding: 40px;
+  border-radius: 60px;
 }
 
 @keyframes slide {
@@ -130,12 +131,11 @@ header {
   gap: 30px;
 }
 
-/* Feature Card Styling */
 .about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #333; /* Card background */
+  background-color: #333; 
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
@@ -144,7 +144,6 @@ header {
   color: white;
 }
 
-/* Feature Content Styling */
 .about-content {
   width: 50%;
   padding: 20px;
@@ -162,7 +161,6 @@ header {
   color: #ffffff;
 }
 
-/* Feature Image Styling */
 .about-image {
   width: 50%;
   text-align: right;
