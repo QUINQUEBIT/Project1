@@ -9,6 +9,11 @@ setInterval(() => {
   slides[currentIndex].style.transform = `translateX(0)`;
 }, 3000);
 
+// Toggle sidebar menu
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+  document.querySelector('.sidebar').classList.toggle('active');
+});
+
 // Dropdown Menu
 document.querySelectorAll('.dropdown').forEach((dropdown) => {
   dropdown.addEventListener('click', (e) => {
