@@ -1,47 +1,49 @@
+// Required Files and Structure: Updated and Detailed Code for Your Website
+
+// 1. Backend: app.js
 const express = require('express');
 const path = require('path');
-require('dotenv').config();
+const dotenv = require('dotenv');
+const galleryRoutes = require('./routes/galleryRoutes');
+const productRoutes = require('./routes/productRoutes');
 
-const galleryRoutes = require('./routes/galleryRoutes.js');
-const productRoutes = require('./routes/productRoutes.js');
-
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use('/assets', express.static(path.join(__dirname, '../frontend/assets')));
+// Set view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'frontend/views'));
 
-app.use('/api/gallery', galleryRoutes);
-app.use('/api/products', productRoutes);
+// Middleware
+app.use(express.static(path.join(__dirname, 'frontend/assets')));
+app.use(express.json());
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-app.set('views', path.join(__dirname, '../frontend/views'));
-
-// Serve EJS Pages
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
-});
-
-app.get("/about-us", (req, res) => {
-  res.render("about-us", { title: "About Us" });
-});
-
-app.get("/services", (req, res) => {
-  res.render("services", { title: "Services" });
-});
-
-app.get("/projects", (req, res) => {
-  res.render("projects", { title: "Projects" });
-});
-
-app.get("/products", (req, res) => {
-  res.render("products", { title: "Products" });
-});
+// Routes
+app.use('/gallery', galleryRoutes);
+app.use('/products', productRoutes);
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { title: 'Suraksha Precast', description: 'India\'s Leading Manufacturer of Precast Concrete Products' });
 });
 
+app.get('/about-us', (req, res) => {
+  res.render('about-us', { title: 'About Us', content: 'Content about Suraksha Precast.' });
+});
+
+app.get('/services', (req, res) => {
+  res.render('services', { title: 'Our Services', services: ['Service 1', 'Service 2', 'Service 3'] });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects', { title: 'Our Projects', projects: ['Project 1', 'Project 2', 'Project 3'] });
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact', { title: 'Contact Us', phone: '+91 9876543210', email: 'info@suraksha.com' });
+});
+
+// Start server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
