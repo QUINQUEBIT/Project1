@@ -1,4 +1,4 @@
-// Slider Functionality
+
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slider img');
 const totalSlides = slides.length;

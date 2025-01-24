@@ -94,19 +94,19 @@ header {
 }
 
 .slider img {
-  width: 100%;
+  width: 50%;
   flex-shrink: 0;
-  height: 600px;
+  height: 470px;
   animation: slide 12s infinite;
   padding: 40px;
-  border-radius: 60px;
+  border-radius: 10%;
 }
 
 @keyframes slide {
-  0% { transform: translateX(0%); }
-  25% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
+  0% { transform: translateX(50%); }
+  30% { transform: translateX(-50%); }
+  70% { transform: translateX(-100%); }
+  100% { transform: translateX(50%); }
   
 }
 
@@ -122,6 +122,14 @@ header {
     width: 100%; 
     padding: 10px;
   }
+  @keyframes slide {
+    0% { transform: translateX(0%); }
+    30% { transform: translateX(-100%); }
+    70% { transform: translateX(-150%); }
+    100% { transform: translateX(0%); }
+    
+  }
+  
 }
 .about-section {
   padding: 40px;
@@ -191,5 +199,86 @@ header {
   .about-image img {
       clip-path: none;
       border-radius: 15px;
+  }
+}
+.products {
+  padding: 40px;
+  background-color: #333; 
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333; 
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  gap: 20px;
+  color: white;
+  height: min-content;
+}
+
+.product-content {
+  width: 50%;
+  padding: 20px;
+}
+
+.product-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.product-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.product-image {
+  width: 50%;
+  text-align: right;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  align-items: start;
+  
+  transition: transform 0.3s ease;
+}
+
+.product-container:hover .product-image img {
+  transform: scale(1.05); 
+}
+
+@media (max-width: 768px) {
+  .product-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .product-content, .product-image {
+      width: 100%;
+  }
+
+  .product-image img {
+      clip-path: none;
+      border-radius: 15px;
+  }
+}
+.carousel-inner img{
+  height: 500px;
+
+}
+@media (max-width: 468px) {
+  .carousel-inner img{
+    height: 230px;
   }
 }
