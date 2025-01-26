@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    loadNavbar();
+    loadfooter();
 });
 
-function loadNavbar() {
+function loadfooter() {
     fetch('assets/html/footer.html') 
         .then(response => {
             if (!response.ok) {

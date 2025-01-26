@@ -20,6 +20,9 @@ app.set('views', path.join(__dirname, '../frontend/views'));
 app.get('/', (req, res) => {
   res.render('index');
 });
+app.get('/about-us', (req, res) => {
+  res.render('about-us');
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

@@ -1,4 +1,90 @@
 /* Reset and Body */
+
+:root {
+
+  /**
+   * colors
+   */
+
+  /* gradient */
+  --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240deg 33.33% 18.82%) 3%, hsl(213.23deg 28.89% 44.12%) 97%);
+ 
+  --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsl(191.14deg 35.35% 61.18%) 100%), hsl(218.14deg 59% 39.22%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right, 
+    hsl(45, 100%, 71%) 0%, 
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(135deg, hsl(54.28deg 86.92% 61.48% / 36%) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(213.23deg 28.89% 44.12%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    hsl(45, 100%, 72%), 
+    hsl(35, 100%, 68%)
+  );
+
+  /* solid */
+
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240deg 34.04% 18.75%);
+  --eerie-black-2: hsl(231 32% 21% / 1);
+  --smoky-black: hsl(191.01deg 35.13% 61.16%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --vegas-gold: hsl(45, 54%, 58%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
+  /**
+   * typography
+   */
+
+  /* font-family */
+  --ff-poppins: 'Poppins', sans-serif;
+
+  /* font-size */
+  --fs-1: 24px;
+  --fs-2: 18px;
+  --fs-3: 17px;
+  --fs-4: 16px;
+  --fs-5: 15px;
+  --fs-6: 14px;
+  --fs-7: 13px;
+  --fs-8: 11px;
+
+  /* font-weight */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+
+  /**
+   * shadow
+   */
+  
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease-in-out;
+
+}
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -133,11 +219,15 @@ header {
 }
 .about-section {
   padding: 10px;
+
   background-color: #ffffff; 
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
 }
+
+  
 
 .about-container {
   display: flex;
@@ -160,7 +250,7 @@ header {
 .about-section h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #333;
 }
 
 .about-content p {
@@ -170,7 +260,7 @@ header {
 }
 
 .about-image {
-  width: 50%;
+  width: 80%;
   text-align: right;
 }
 
@@ -281,4 +371,13 @@ header {
   .carousel-inner img{
     height: 230px;
   }
+}
+h1.text-small {
+  font-size: 12px;
+  margin-top: 100px;
+  color: #000000;
+}
+h2.abt-title {
+  font-size: 45px;
+  color: #333;
 }
