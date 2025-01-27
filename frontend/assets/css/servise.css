@@ -1,0 +1,95 @@
+/* General styles for the service cards */
+.service-card {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    height: 350px; /* Fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing of elements inside the card */
+  }
+  
+  .service-card svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .service-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+    flex-grow: 1; /* Allows the paragraph to take remaining space if needed */
+  }
+  
+  /* Hover effect */
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Card-specific border colors */
+  .card-1 {
+    border-left: 5px solid #3498db;
+  }
+  
+  .card-2 {
+    border-left: 5px solid #2ecc71;
+  }
+  
+  .card-3 {
+    border-left: 5px solid #f39c12;
+  }
+  
+  .card-4 {
+    border-left: 5px solid #e74c3c;
+  }
+  
+  .card-5 {
+    border-left: 5px solid #9b59b6;
+  }
+  
+  /* Animation on hover for smoother effect */
+  .service-card:hover {
+    animation: cardHoverAnimation 0.3s ease-in-out;
+  }
+  
+  @keyframes cardHoverAnimation {
+    0% {
+      transform: translateY(0);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  /* Adjusting spacing for different screen sizes */
+  @media (max-width: 768px) {
+    .service-card {
+      padding: 20px;
+      height: auto; /* Remove fixed height for smaller screens */
+    }
+  
+    .service-card svg {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .service-card h4 {
+      font-size: 1.3rem;
+    }
+  
+    .service-card p {
+      font-size: 0.9rem;
+    }
+  }
+  
