@@ -95,15 +95,16 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('/Fronend/hero.webp') no-repeat center center/cover;
+    background: url('/assets/gallery/photos/hero.webp') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    
     position: relative;
 }
+
 
 .hero-text {
     /* background: rgba(0, 0, 0, 0.5); */
@@ -120,6 +121,33 @@ header {
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+       -225deg,
+       #4e4b4b 0%,
+       #000000 29%,
+       #390f1d 67%,
+       #4e4b4b 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 190px;
+ }
+ 
+ @keyframes textclip {
+    to {
+       background-position: 200% center;
+    }
+ }
+ 
 
 .btn {
     display: inline-block;

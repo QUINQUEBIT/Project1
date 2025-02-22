@@ -20,7 +20,7 @@ app.set('views', path.join(__dirname, '../frontend/views'));
 
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('Home');
 });
 app.get('/about-us', (req, res) => {
   res.render('about-us');
