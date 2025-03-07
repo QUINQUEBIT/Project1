@@ -3,43 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products</title>
-    <link rel="stylesheet" href="/Fronend/css/Products.css"> <!-- Link to your CSS -->
+    <title>Suraksha Precast - Products</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef1f5;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/frontend/assets/gallery/photos/hero.webp') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        span{
+            color: #c2c21b;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+            gap: 25px;
+            padding: 40px;
+            justify-content: center;
+        }
+        .product-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* background: rgba(255, 255, 255, 0.2); Transparent effect */
+            padding: 20px;
+            border-radius: 12px;
+            /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+            transition: transform 0.3s, background 0.3s;
+            backdrop-filter: blur(10px); /* Glassmorphism effect */
+        }
+        /* .product-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        } */
+        .product-card img {
+            width: 40%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .quote-btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .quote-btn:hover {
+            background-color: #cc5200;
+        }
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .product-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .product-card img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <h1>Our Products</h1>
-        <p>Explore our range of high-quality precast solutions designed for modern construction needs.</p>
+    <header>
+        Our Precast Products
+    </header>
+    
+    <section class="hero">
+        Durable &  <b><span>High-Quality</span></b> Precast Solutions
     </section>
-
-    <!-- Product Grid -->
-    <section id="product-grid">
-        <div class="container">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Short description of the product.</p>
+    
+    <section class="product-grid">
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Precast Wall.jpg" alt="Precast Product 1">
+            <div class="product-info">
+                <h3>Precast Wall</h3>
+                <p>Strong and durable precast walls for industrial and residential use.</p>
+                <button class="quote-btn">Get Quote</button>
             </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Short description of the product.</p>
+        </div>
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Concrete Slabs.jpg" alt="Precast Product 2">
+            <div class="product-info">
+                <h3>Concrete Slabs</h3>
+                <p>Ready-to-install slabs for flooring and roofing applications.</p>
+                <button class="quote-btn">Get Quote</button>
             </div>
-            <div class="product">
-                <img src="product3.jpg" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>Short description of the product.</p>
+        </div>
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Precast Staircase.jpg" alt="Precast Product 3">
+            <div class="product-info">
+                <h3>Precast Staircase</h3>
+                <p>High-strength staircases for easy and fast installation.</p>
+                <button class="quote-btn">Get Quote</button>
             </div>
-            <!-- Add more products as needed -->
+        </div>
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Concrete Blocks.jpg" alt="Precast Product 4">
+            <div class="product-info">
+                <h3>Concrete Blocks</h3>
+                <p>Reliable and durable blocks for various construction needs.</p>
+                <button class="quote-btn">Get Quote</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Precast Beams.jpg" alt="Precast Product 5">
+            <div class="product-info">
+                <h3>Precast Beams</h3>
+                <p>Precast concrete beams for strong support structures.</p>
+                <button class="quote-btn">Get Quote</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Boundary Walls.jpg" alt="Precast Product 6">
+            <div class="product-info">
+                <h3>Boundary Walls</h3>
+                <p>Secure and cost-effective precast boundary walls.</p>
+                <button class="quote-btn">Get Quote</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Precast Pipes.jpg" alt="Precast Product 7">
+            <div class="product-info">
+                <h3>Precast Pipes</h3>
+                <p>Durable pipes for efficient drainage and water transport.</p>
+                <button class="quote-btn">Get Quote</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/frontend/assets/gallery/photos/Precast Columns.jpg" alt="Precast Product 8">
+            <div class="product-info">
+                <h3>Precast Columns</h3>
+                <p>Robust precast columns for stable building structures.</p>
+                <button class="quote-btn">Get Quote</button>
+            </div>
         </div>
     </section>
-
-    <!-- Back Button -->
-    <div class="back-button">
-        <a href="index.html" class="btn">Back to Home</a>
-    </div>
-
+    
+    <script src="script.js"></script>
 </body>
 </html>
