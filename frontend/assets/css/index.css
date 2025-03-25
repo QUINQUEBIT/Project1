@@ -1122,3 +1122,49 @@ section.contain{
         height: 200px;
     }
 }
+  /* Floating Button Styles */
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.floating-button:hover {
+    transform: scale(1.1);
+}
+
+/* Call Button */
+.call-button {
+    right: 20px;
+    background-color: #28a745;
+}
+.call-button:hover {
+    background-color: #218838;
+}
+
+/* Email Button */
+.email-button {
+    left: 20px;
+    background-color: #007bff;
+}
+.email-button:hover {
+    background-color: #0056b3;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    left: 92%;
+    transform: translateX(-50%);
+    background-color: #25D366;
+}
+.whatsapp-button:hover {
+    background-color: #1DA851;
+}
