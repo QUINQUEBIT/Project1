@@ -983,11 +983,13 @@ footer {
     background: #222;
     color: white;
     padding: 40px 10%;
+    align-items: center;
 }
+
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -1023,7 +1025,9 @@ footer {
 .map iframe {
     border-radius: 10px;
 }
-
+.icons{
+    display: flex;
+}
 .social-icons a {
     display: inline-block;
     margin: 5px;
@@ -1147,6 +1151,14 @@ section.contain{
     color: white;
     grid-area: item5;
 }
+.footer_container{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
 
 
 @media (max-width: 991px){
@@ -1200,6 +1212,14 @@ section.contain{
 @media (max-width: 480px) {
     .map-container {
         height: 200px;
+        
+    }
+    .footer_container{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 /* Floating Button Styles */
