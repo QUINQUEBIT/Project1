@@ -41,13 +41,13 @@ ScrollReveal().reveal(".flip", {
 ScrollReveal().reveal(".slide-right", {
   duration: 500,
   origin: "left",
-  distance: "30px",
+  distance: "10px",
   easing: "ease-in-out"
 });
 ScrollReveal().reveal(".slide-left", {
   duration: 500,
   origin: "right",
-  distance: "30px",
+  distance: "10px",
   easing: "ease-in-out"
 });
 
