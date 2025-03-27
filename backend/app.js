@@ -26,7 +26,7 @@ app.get('/about-us', (req, res) => {
   res.render('about-us');
 });
 app.get('/product', (req, res) => {
-  res.render('products');
+  res.render('product');
 });
 app.get('/services', (req, res) => {
   res.render('services');
