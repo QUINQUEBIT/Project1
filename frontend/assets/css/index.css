@@ -1221,8 +1221,9 @@ section.contain{
         width: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
+        padding: 10px;
     }
 }
 /* Floating Button Styles */
