@@ -998,7 +998,9 @@ footer {
     font-size: 18px;
     margin-bottom: 10px;
 }
-
+.contact p{
+    text-align: center;
+}
 .footer-content p, .footer-content ul {
     font-size: 14px;
     color: #ddd;
