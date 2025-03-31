@@ -43,7 +43,7 @@ header {
 }
 
 /* Navigation Links */
-.nav-links {
+/* .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -59,7 +59,7 @@ header {
 
 .nav-links a:hover {
     color: #007bff;
-}
+} */
 
 /* Mobile View */
 /* @media (max-width: 768px) {
@@ -123,7 +123,8 @@ header {
     font-size: 1.2rem;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #BEE7EA;
+    color: #ffffff;
+    background-color: #0000009f;
     /* text-shadow : -1px -1px 1px #fff, 1px 1px 1px #000000 ; color : #4a4a4a; opacity : 1; */
 }
 .hero-text a {
