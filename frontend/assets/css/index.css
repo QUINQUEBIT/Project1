@@ -206,11 +206,12 @@ header {
     display: inline-block;
     background-image: linear-gradient(
         90deg,
-        #4eff4e 0%,   /* Vibrant Red */
-        #068f4a 25%,  /* Warm Orange */
-        #044d1c 50%,  /* Golden Yellow */
-        #0da35d 75%,  /* Cool Cyan */
-        #330867 100%  /* Deep Purple */
+#ff0000 0%,   /* Vibrant Red */
+#ff8000 25%,  /* Warm Orange */
+#ffd700 50%,  /* Golden Yellow */
+#00ffff 75%,  /* Cool Cyan */
+#4b0082 100%  /* Deep Purple */
+
     );
     background-size: 300% auto;
     background-clip: text;
