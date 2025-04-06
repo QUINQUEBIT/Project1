@@ -109,7 +109,6 @@ header {
     position: relative;
 }
 
-
 .hero-text {
     /* background: rgb(255, 255, 255); */
     /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
@@ -140,6 +139,7 @@ header {
     transition: background 0.3s ease;
     
 }
+
 /* .animate-charcter {
     text-transform: uppercase;
     background-image: linear-gradient(
@@ -208,12 +208,12 @@ header {
     display: inline-block;
     background-image: linear-gradient(
         90deg,
-        #fffacd 0%,    /* Lemon Chiffon (soft yellow) */
-        #ffeb3b 25%,   /* Bright Yellow */
-        #ffc107 50%,   /* Amber */
-        #ffb300 75%,   /* Deep Gold */
-        #ffd700 100%   /* Classic Gold */
-    );
+        #ff6f00 0%,    /* Vibrant Orange */
+  #ffea00 25%,   /* Vibrant Yellow */
+  #00b0ff 50%,   /* Sky Blue */
+  #00e676 75%,   /* Vibrant Green */
+  #2979ff 100%   /* Vivid Blue */
+        );
     background-size: 300% auto;
     background-clip: text;
     -webkit-background-clip: text;
