@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
@@ -206,20 +208,18 @@ header {
     display: inline-block;
     background-image: linear-gradient(
         90deg,
-#ff0000 0%,   /* Vibrant Red */
-#ff8000 25%,  /* Warm Orange */
-#ffd700 50%,  /* Golden Yellow */
-#00ffff 75%,  /* Cool Cyan */
-#4b0082 100%  /* Deep Purple */
-
+        #fffacd 0%,    /* Lemon Chiffon (soft yellow) */
+        #ffeb3b 25%,   /* Bright Yellow */
+        #ffc107 50%,   /* Amber */
+        #ffb300 75%,   /* Deep Gold */
+        #ffd700 100%   /* Classic Gold */
     );
     background-size: 300% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glowingText 4s ease-in-out infinite alternate;
-}
-
+} 
 /* Smooth Gradient Shift */
 @keyframes glowingText {
     0% { background-position: 0% center; }
